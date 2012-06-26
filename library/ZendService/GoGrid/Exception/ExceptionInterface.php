@@ -19,7 +19,7 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 
-namespace Zend\Service\GoGrid;
+namespace Zend\Service\GoGrid\Exception;
 
 /**
  * @category   Zend
@@ -27,5 +27,6 @@ namespace Zend\Service\GoGrid;
  * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
-interface Exception
-{}
+interface ExceptionInterface
+{
+}
