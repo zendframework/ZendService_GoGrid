@@ -8,7 +8,7 @@
  * @package   Zend_Service
  */
 
-namespace Zend\Service\GoGrid;
+namespace ZendService\GoGrid;
 
 use Zend\Http\Client as HttpClient;
 

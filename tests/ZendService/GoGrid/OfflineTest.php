@@ -8,13 +8,13 @@
  * @package   Zend_Service
  */
 
-namespace ZendTest\Service\GoGrid;
+namespace ZendServiceTest\GoGrid;
 
-use Zend\Service\GoGrid\Server;
+use ZendService\GoGrid\Server;
 
 /**
  * @category   Zend
- * @package    Zend\Service\GoGrid
+ * @package    ZendService\GoGrid
  * @subpackage UnitTests
  * @group      Zend_Service
  * @group      Zend_Service_GoGrid
@@ -24,7 +24,7 @@ class OfflineTest extends \PHPUnit_Framework_TestCase
     /**
      * Reference to GoGrid Job
      *
-     * @var \Zend\Service\GoGrid\Job
+     * @var \ZendService\GoGrid\Job
      */
     protected $gogrid;
 
@@ -72,7 +72,7 @@ class OfflineTest extends \PHPUnit_Framework_TestCase
     public function testConstructExceptionMissingKeyAttribute()
     {
         $this->setExpectedException(
-            'Zend\Service\GoGrid\Exception\InvalidArgumentException',
+            'ZendService\GoGrid\Exception\InvalidArgumentException',
             'The key cannot be empty'
         );
         $server= new Server(null,'bar');
@@ -85,7 +85,7 @@ class OfflineTest extends \PHPUnit_Framework_TestCase
     public function testConstructExceptionMissingSecretAttribute()
     {
         $this->setExpectedException(
-            'Zend\Service\GoGrid\Exception\InvalidArgumentException',
+            'ZendService\GoGrid\Exception\InvalidArgumentException',
             'The secret cannot be empty'
         );
         $server= new Server('foo',null);

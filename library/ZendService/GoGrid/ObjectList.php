@@ -8,12 +8,12 @@
  * @package   Zend_Service
  */
 
-namespace Zend\Service\GoGrid;
+namespace ZendService\GoGrid;
 
 use ArrayAccess;
 use Countable;
 use Iterator;
-use Zend\Service\GoGrid\Object;
+use ZendService\GoGrid\Object;
 
 /**
  * List of servers retrived from the GoGrid web service
@@ -30,7 +30,7 @@ class ObjectList implements
     const SUCCESS_STATUS= 'success';
 
     /**
-     * @var array Array of Zend\Service\GoGrid\Object
+     * @var array Array of ZendService\GoGrid\Object
      */
     protected $_objects = array();
 
@@ -135,7 +135,7 @@ class ObjectList implements
      *
      * Implement Iterator::current()
      *
-     * @return Zend\Service\GoGrid\Object
+     * @return ZendService\GoGrid\Object
      */
     public function current()
     {
@@ -214,7 +214,7 @@ class ObjectList implements
      *
      * @param   int     $offset
      * @throws  Exception\OutOfBoundsException
-     * @return  Zend\Service\GoGrid\Object
+     * @return  ZendService\GoGrid\Object
      */
     public function offsetGet($offset)
     {

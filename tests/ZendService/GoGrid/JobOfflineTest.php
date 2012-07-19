@@ -8,15 +8,15 @@
  * @package   Zend_Service
  */
 
-namespace ZendTest\Service\GoGrid;
+namespace ZendServiceTest\GoGrid;
 
-use Zend\Service\GoGrid\Job;
-use Zend\Service\GoGrid\ObjectList;
+use ZendService\GoGrid\Job;
+use ZendService\GoGrid\ObjectList;
 use Zend\Http\Client\Adapter\Test as HttpTest;
 
 /**
  * @category   Zend
- * @package    Zend\Service\GoGrid
+ * @package    ZendService\GoGrid
  * @subpackage UnitTests
  * @group      Zend_Service
  * @group      Zend_Service_GoGrid
@@ -26,7 +26,7 @@ class JobOfflineTest extends \PHPUnit_Framework_TestCase
     /**
      * Reference to GoGrid Job
      *
-     * @var Zend\Service\GoGrid\Job
+     * @var ZendService\GoGrid\Job
      */
     protected $_job;
     /**
@@ -62,7 +62,7 @@ class JobOfflineTest extends \PHPUnit_Framework_TestCase
     public function testConstructExceptionMissingKeyAttribute()
     {
         $this->setExpectedException(
-            'Zend\Service\GoGrid\Exception\InvalidArgumentException',
+            'ZendService\GoGrid\Exception\InvalidArgumentException',
             'The key cannot be empty'
         );
         $job= new Job(null,TESTS_ZEND_SERVICE_GOGRID_ONLINE_SECRET);
@@ -75,7 +75,7 @@ class JobOfflineTest extends \PHPUnit_Framework_TestCase
     public function testConstructExceptionMissingSecretAttribute()
     {
         $this->setExpectedException(
-            'Zend\Service\GoGrid\Exception\InvalidArgumentException',
+            'ZendService\GoGrid\Exception\InvalidArgumentException',
             'The secret cannot be empty'
         );
         $job= new Job(TESTS_ZEND_SERVICE_GOGRID_ONLINE_KEY,null);

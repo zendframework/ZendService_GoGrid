@@ -8,7 +8,7 @@
  * @package   Zend_Service
  */
 
-namespace Zend\Service\GoGrid\Exception;
+namespace ZendService\GoGrid\Exception;
 
 /**
  * @category   Zend

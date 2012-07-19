@@ -8,14 +8,14 @@
  * @package   Zend_Service
  */
 
-namespace ZendTest\Service\GoGrid;
+namespace ZendServiceTest\GoGrid;
 
-use Zend\Service\GoGrid\Server;
+use ZendService\GoGrid\Server;
 
 
 /**
  * @category   Zend
- * @package    Zend\Service\GoGrid
+ * @package    ZendService\GoGrid
  * @subpackage UnitTests
  */
 class OnlineTest extends \PHPUnit_Framework_TestCase
@@ -23,7 +23,7 @@ class OnlineTest extends \PHPUnit_Framework_TestCase
     /**
      * Reference to GoGrid Server object
      *
-     * @var Zend\Service\GoGrid\Server
+     * @var ZendService\GoGrid\Server
      */
     protected $gogrid;
 
@@ -49,7 +49,7 @@ class OnlineTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         if (!defined('TESTS_ZEND_SERVICE_GOGRID_ONLINE_ENABLED') || TESTS_ZEND_SERVICE_GOGRID_ONLINE_ENABLED != true) {
-            $this->markTestSkipped('Zend\Service\GoGrid online tests are not enabled');
+            $this->markTestSkipped('ZendService\GoGrid online tests are not enabled');
         }
 
         if(!defined('TESTS_ZEND_SERVICE_GOGRID_ONLINE_KEY') || !defined('TESTS_ZEND_SERVICE_GOGRID_ONLINE_SECRET')) {
@@ -153,16 +153,16 @@ class OnlineTest extends \PHPUnit_Framework_TestCase
 
 /**
  * @category   Zend
- * @package    Zend\Service\Rackspace\Servers
+ * @package    ZendService\Rackspace\Servers
  * @subpackage UnitTests
  * @group      Zend\Service
- * @group      Zend\Service\GoGrid
+ * @group      ZendService\GoGrid
  */
 class Skip extends \PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        $this->markTestSkipped('Zend\Service\GoGrid\Server online tests not enabled with an access key ID in '
+        $this->markTestSkipped('ZendService\GoGrid\Server online tests not enabled with an access key ID in '
                              . 'TestConfiguration.php');
     }
 
